@@ -3,10 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>Shortly</title>
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-  <h1 class="text-3xl">shortly</h1>
+  <!-- Nav Container -->
+   <nav class="relative container mx-auto p-6">
+    <!-- Flex Container for all items -->
+    <div class="flex itens-center justify-between">
+      <!-- Flex Container for Logo & Menu -->
+       <div class="flex items-center space-x-20">
+        <!-- Logo -->
+         <img src="images/logo.svg" alt="">
+         <!-- left-Menu -->
+          <div class="hidden space-x-8 font-bold lg:flex">
+            <a href="#" class="text-grayishViolet hover:text-veryDarkviolet">Features</a>
+            <a href="#" class="text-grayishViolet hover:text-veryDarkviolet">Pricing</a>
+            <a href="#" class="text-grayishViolet hover:text-veryDarkviolet">Resources</a>
+          </div>
+       </div>
+
+       <!-- Right Buttons Menu -->
+        <div class="hidden items-center space-x-6 font-bold text-grayishViolet lg:flex">
+          <div class="hover:text-veryDarkviolet">Login</div>
+          <a href="#" class="px-8 py-3 font-bold text-white bg-cyan rounded-full hover:opacity-70">Sign Up</a>
+        </div>
+
+        <!-- @Todo Hamburger Menu -->
+    </div>
+    <!--@Todo Mobile Menu -->
+  </nav>
 </body>
 </html>
