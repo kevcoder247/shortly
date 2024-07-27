@@ -612,8 +612,20 @@ video {
   left: 4rem;
 }
 
+.left-6 {
+  left: 1.5rem;
+}
+
 .left-7 {
   left: 1.75rem;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.top-20 {
+  top: 5rem;
 }
 
 .top-24 {
@@ -633,8 +645,8 @@ video {
   margin-left: -2.5rem;
 }
 
-.-mt-20 {
-  margin-top: -5rem;
+.-mt-\[8rem\] {
+  margin-top: -8rem;
 }
 
 .mb-24 {
@@ -661,24 +673,8 @@ video {
   margin-top: 6rem;
 }
 
-.-mt-\[-10rem\] {
-  margin-top: 10rem;
-}
-
-.-mt-\[10rem\] {
-  margin-top: -10rem;
-}
-
-.-mt-\[7rem\] {
-  margin-top: -7rem;
-}
-
-.-mt-\[8rem\] {
-  margin-top: -8rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
+.block {
+  display: block;
 }
 
 .flex {
@@ -815,8 +811,16 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
 .border-2 {
   border-width: 2px;
+}
+
+.border-t {
+  border-top-width: 1px;
 }
 
 .bg-cyan {
@@ -844,10 +848,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.p-10 {
-  padding: 2.5rem;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -866,10 +866,6 @@ video {
 
 .p-\[1\.1rem\] {
   padding: 1.1rem;
-}
-
-.p-\[1\.5rem\] {
-  padding: 1.5rem;
 }
 
 .px-10 {
@@ -912,24 +908,16 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
 .pb-32 {
   padding-bottom: 8rem;
 }
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.pb-2 {
-  padding-bottom: 0.5rem;
-}
-
-.pb-1 {
-  padding-bottom: 0.25rem;
-}
-
-.pb-3 {
-  padding-bottom: 0.75rem;
 }
 
 .text-center {
@@ -946,6 +934,14 @@ video {
   line-height: 2.5rem;
 }
 
+.text-\[1\.1rem\] {
+  font-size: 1.1rem;
+}
+
+.text-\[1\.8rem\] {
+  font-size: 1.8rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -954,22 +950,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-\[1\.1rem\] {
-  font-size: 1.1rem;
-}
-
-.text-\[1\.7rem\] {
-  font-size: 1.7rem;
-}
-
-.text-\[1\.6rem\] {
-  font-size: 1.6rem;
-}
-
-.text-\[1\.8rem\] {
-  font-size: 1.8rem;
 }
 
 .font-bold {
@@ -982,18 +962,6 @@ video {
 
 .italic {
   font-style: italic;
-}
-
-.leading-3 {
-  line-height: .75rem;
-}
-
-.leading-4 {
-  line-height: 1rem;
-}
-
-.leading-5 {
-  line-height: 1.25rem;
 }
 
 .leading-7 {
@@ -1046,13 +1014,55 @@ video {
   background-size: cover;
 }
 
-.footerLogo{
-  border: 2px solid green;
-  color: white;
-}
-
 .hero-img{
   /* border: 2px solid red; */
+}
+
+/* Hamburger Menu */
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: black;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle{
+  transform: translateY(7px);
+}
+
+.hamburger-bottom{
+  transform: translateY(14px);
+}
+
+.open{
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top{
+  transform: rotate(45deg) translateY(6px) translateX(6px)
+}
+
+.open .hamburger-middle{
+  display:none;
+}
+
+.open .hamburger-bottom{
+  transform: rotate(-45deg) translateY(6px) translateX(-6px)
 }
 
 .hover\:bg-cyanLight:hover {
@@ -1184,6 +1194,10 @@ video {
 
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 
   .lg\:w-1\/2 {

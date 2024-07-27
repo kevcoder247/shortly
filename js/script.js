@@ -1,9 +1,19 @@
 const input = document.getElementById('link-input');
 const form = document.getElementById('link-form');
 const errMsg = document.getElementById('err-msg');
+const menuBtn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu')
+
 
 form.addEventListener('submit', formSubmit);
 
+menuBtn.addEventListener('click', navToggle);
+
+function navToggle(){
+  menuBtn.classList.toggle('open');
+  menu.classList.toggle('flex');
+  menu.classList.toggle('hidden');
+}
 
 // Validate a URL
 function validURL(str) {
